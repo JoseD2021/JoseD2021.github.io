@@ -1,0 +1,28 @@
+/*https://www.campusmvp.es/recursos/post/como-personalizar-los-estilos-css-de-las-barras-de-scroll.aspx*/
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+*::-webkit-scrollbar:vertical {
+    width:5px;
+}
+*::-webkit-scrollbar-button:increment,.scroll::-webkit-scrollbar-button {
+    display: none;
+} 
+*::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+*{
+    /* scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0); */
+    scrollbar-color: #ddd #ddd;
+    scrollbar-width: thin;
+}

@@ -6,9 +6,6 @@ body {
 body > section{
     min-height: 100vh;
 }
-*::grammar-error{
-    color: red;
-}
 body > * {
     margin-left: 8px;
 }
@@ -19,13 +16,15 @@ body > header{
     margin-bottom: 18px;
     box-shadow: 0px 2px 2px rgb(20, 80, 200);
     padding: 20px 30px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fff;
+    overflow-x: hidden;
 }
 header img{
-    border-radius: 10px;
+    border-radius: 4px;
     float: right;
-    height: 3rem;
+    height: 2rem;
+    margin-right: -40px;
 }
 header p{
     margin: 0 0;
@@ -71,6 +70,7 @@ iframe {
         position: absolute;
         left: 650px;
         width: calc(650px - 24%);
+        margin-top: 20px;
     }
     
 }
@@ -81,13 +81,61 @@ code{
     display: block;
     color: crimson;
     line-height: 1.4;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
-body > footer{
-    background-color: #cecece;
+a{
+    color: inherit;
+    font-style: italic;
+}
+aside{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 40px;
+    height: auto;
+}
+aside > div{
+    width: 100%;
+    height: auto;
+    padding: 2px 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+    background-color: #fff;
+}
+aside > div:hover{
+    box-shadow: 0px 0px 1px 1px #efefef;
+}
+aside > div img{
+    width: 100%;
+}
+footer{
     margin: 0px 0px;
     margin-top: 8px;
 }
-footer img{
-    padding: 20px 30px;
-    height: 2rem;
+footer > section:first-child{
+
+    padding: 20px 10px;
+    background-color: #333334;
+    
+    font-size: 90%;
+}
+footer > section:first-child > p:first-child{
+    color: #fff;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+footer > section:first-child > p{
+    margin: 7px;
+    color: #eee;
+}
+footer > section:last-child{
+    text-align: center;
+    font-style: italic;
+    min-height: 1rem;
+    padding: 3px;
+    background-color: #222;
+    color:#aaa;
+    box-shadow: 0px -1px 1px #222;
 }

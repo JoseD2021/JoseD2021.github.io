@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+body > section{
+    min-height: 100vh;
+}
+*::grammar-error{
+    color: red;
+}
+body > * {
+    margin-left: 8px;
+}
+body > header{
+    background-color: rgb(20, 80, 200);
+    
+    margin: 0px 0px;
+    margin-bottom: 18px;
+    box-shadow: 0px 2px 2px rgb(20, 80, 200);
+    padding: 20px 30px;
+    font-size: 1.8rem;
+    color: #fff;
+    overflow-x: hidden;
+}
+header img{
+    border-radius: 4px;
+    float: right;
+    height: 2rem;
+    margin-right: -40px;
+}
+header p{
+    margin: 0 0;
+}
+h2{
+    color: rgb(20, 80, 200);
+    margin-left: 15px;
+}
+.summary{
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    width: 95vw;
+    margin-bottom: 10px;
+    /* overflow: hidden; */
+}
+.summaryHide *:not(section:first-child){
+    display: none;
+}
+.summary > section{
+    padding: 8px 10px;
+    margin: 2px 2px;
+}
+.summary > section:first-child{
+    background-color: #eee;
+    color: #000;
+    border-radius: 10px;
+}
+iframe {
+    max-width: 90%;
+    height: auto;
+    min-height: 220px;
+}
+@media (min-width: 850px) {
+    .summary{
+        width: 80vw;
+    }
+    iframe{
+        min-height: 450px;
+    }
+}
+@media (min-width: calc(1550px - 24vw)) {
+    .summary > section:last-child > p{
+        position: absolute;
+        left: 650px;
+        width: calc(650px - 24%);
+        margin-top: 20px;
+    }
+    
+}
+code{
+    background-color: #f5f5f5;
+    padding: 3px 5px;
+    border-radius: 5px;
+    display: block;
+    color: crimson;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+aside{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 40px;
+    height: auto;
+}
+aside > div{
+    width: 100%;
+    height: auto;
+    padding: 2px 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+    background-color: #fff;
+}
+aside > div:hover{
+    /* background-color: #fafafa; */
+    box-shadow: 0px 0px 1px 1px #efefef;
+}
+aside > div img{
+    width: 100%;
+}
+footer{
+    margin: 0px 0px;
+    margin-top: 8px;
+}
+footer > section:first-child{
+
+    padding: 20px 10px;
+    background-color: #333334;
+    
+    font-size: 90%;
+}
+footer > section:first-child > p:first-child{
+    color: #fff;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+footer > section:first-child > p{
+    margin: 7px;
+    color: #eee;
+}
+footer > section:last-child{
+    text-align: center;
+    font-style: italic;
+    min-height: 1rem;
+    padding: 3px;
+    background-color: #222;
+    color:#aaa;
+    box-shadow: 0px -1px 1px #222;
+}

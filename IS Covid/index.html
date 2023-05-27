@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.css">
+    <script src="script.js"></script>
+    <title>Covid-19</title>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.usPFknkDsphcLOJ12OX6-wHaCA?pid=ImgDet&rs=1"><p>Introducción Ing. Sistemas</p>
+    </header>
+    <section>
+        <h2><p>Casos Positivos Covid-19 de Bucaramanga entre marzo 2020 a 2022</p></h2>
+        <section class="summary">
+            <section>¿Cuales fueron las EPS con mayor cantidad de pacientes?</section>
+            <section>
+                <p> La mayoría de los pacientes fueron atendidos en SANITAS E.P.S. S.A. con un 18.8% del total de la atención, aunque una gran parte de los reportes (15.6%) no se determinó la correspondencia a una EPS. <br>
+                    En la lista, también destacan SALUD TOTAL S.A. E.P.S, NUEVA EPS y SURA E.P.S con el 11.6%, 11.5%, y 11.2% respectivamente.
+                    <code>
+                        SELECT NOMBRE_EPS EPS, desc_serv_hosp Servicio, count(desc_serv_hosp) Total <br>
+                        FROM `Covid19.reporte` <br>
+                        GROUP BY NOMBRE_EPS, desc_serv_hosp <br>
+                        ORDER BY Total DESC <br>
+                    </code>
+                </p>
+                <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/40290d09-5017-4aea-8791-98896dd8b864/page/tEnnC" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+        </section>
+    </section>
+    <aside>
+        <div><a href="https://console.cloud.google.com/bigquery?sq=165329805839:92d651b3e63a417b9764f4408817a43f" target = "_ blank"><img src="https://static.amarello.cloud/img/bigquery.png" alt="bigquery"></a></div>
+        <div><a href="https://lookerstudio.google.com/reporting/40290d09-5017-4aea-8791-98896dd8b864" target = "_ blank"><img src="https://www.dmit.co.th/wp-content/uploads/2022/10/Looker-Studio-Logo-1024x1024.png" alt="lookerstudio"></a></div>
+    </aside>
+    <footer>
+        <section>
+            <p>Autor</p>
+            <p>José David Martínez Fernández</p>
+        </section>
+        <section>2023</section>
+    </footer>
+</body>
+</html>
